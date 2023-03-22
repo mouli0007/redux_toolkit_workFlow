@@ -72,3 +72,24 @@ export const addNew_Post = createAsyncThunk(
         state.posts.push(action.payload);
       });
   },
+
+    
+    
+##### Crate Action ###### 
+
+  if we have a same action for a multiple slices we can use action creators
+  
+  import {createAction} from '@reduxjs/toolkit'
+  
+  ### Syantx ### 
+  const restet = createAction('app/reset')
+  
+  #### Use extraBuuilder in both slices to achive the functionality ####
+  
+  extrabuilders(builder){
+  
+  builder.addCase(reset,(state,action)=>{
+  
+  return []
+  })
+  }
